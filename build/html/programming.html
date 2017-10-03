@@ -1,0 +1,294 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Getting Started and system overview &mdash; Atlas Technical Reference 2 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="Atlas Technical Reference 2 documentation" href="index.html"/>
+        <link rel="next" title="Getting Started and system overview" href="software.html"/>
+        <link rel="prev" title="Getting Started and system overview" href="file_storage_and_io.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Atlas Technical Reference
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting Started and system overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="running_jobs.html">Getting Started and system overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="file_storage_and_io.html">Getting Started and system overview</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Getting Started and system overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#how-to-log-into-the-system">How to log into the system</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#ssh-key-generation">SSH key generation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#technical-details">Technical details</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="software.html">Getting Started and system overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="limits.html">Getting Started and system overview</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Atlas Technical Reference</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Getting Started and system overview</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/programming.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="getting-started-and-system-overview">
+<h1>Getting Started and system overview<a class="headerlink" href="#getting-started-and-system-overview" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="how-to-log-into-the-system">
+<h2>How to log into the system<a class="headerlink" href="#how-to-log-into-the-system" title="Permalink to this headline">¶</a></h2>
+<p>Atlas should be used in the following way:</p>
+<ul class="simple">
+<li>Log in to the access node ac.sw.ehu.es:</li>
+</ul>
+<p><code class="code docutils literal"><span class="pre">ssh</span> <span class="pre">username&#64;ac.sw.ehu.es</span></code></p>
+<p>You can also establish connection with login nodes manually:</p>
+<p><code class="code docutils literal"><span class="pre">ssh</span> <span class="pre">username&#64;ac-01.sw.ehu.es</span></code>
+<code class="code docutils literal"><span class="pre">ssh</span> <span class="pre">username&#64;ac-02.sw.ehu.es</span></code></p>
+<ul class="simple">
+<li>Establish connection with atlas.sw.ehu.es:</li>
+</ul>
+<p><code class="code docutils literal"><span class="pre">ssh</span> <span class="pre">username&#64;atlas.sw.ehu.es</span></code></p>
+<p>You would need to bring your files and data over, compile your code or use the compiled one, and create a batch submission script. Then submit that script so that your application runs on the compute nodes. Pay attention to the various file systems available and the choices in programming environments.</p>
+<div class="section" id="ssh-key-generation">
+<h3>SSH key generation<a class="headerlink" href="#ssh-key-generation" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+<div class="section" id="technical-details">
+<h2>Technical details<a class="headerlink" href="#technical-details" title="Permalink to this headline">¶</a></h2>
+<p>Atlas nodes run CentOS 7.2 and are managed with batch services through Torque 4.2.10 and Maui 3.3.1. Global scratch storage area is supported by a BeeGFS parallel distributed file system with 6 I/O servers. Inter-node communicationis through a FDR InfiniBand network.</p>
+<p>Compute nodes are housed in 4 racks. Each node has two Intel Xeon E5-2680 v3/E5-2683 v4. Nodes are configured with 128GB/256Gb/512GB memory.</p>
+<p>The interconnect is an FDR InfiniBand network of Mellanox switches, consisting of a ring topology over 5 switches.</p>
+<p>The configuration and features for the compute nodes, interconnect and I/O systems are described below.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="12%" />
+<col width="12%" />
+<col width="77%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head" colspan="3">Specifications</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><strong>Purchase year</strong></td>
+<td colspan="2">2015, 2016, 2017</td>
+</tr>
+<tr class="row-odd"><td><strong>Nodes</strong></td>
+<td colspan="2">17 nodes equipped with 2 12-core Intel Xeon E5-2680 v3 at 2.50GHz (24 in total) and 500GB of usable RAM each. Labeled as bigsize.</td>
+</tr>
+<tr class="row-even"><td><strong>Network</strong></td>
+<td colspan="2">&#160;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="software.html" class="btn btn-neutral float-right" title="Getting Started and system overview" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="file_storage_and_io.html" class="btn btn-neutral" title="Getting Started and system overview" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, Diego Lasa.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'2',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

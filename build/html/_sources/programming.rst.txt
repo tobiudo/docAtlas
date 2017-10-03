@@ -1,0 +1,50 @@
+***********************************
+Getting Started and system overview
+***********************************
+
+How to log into the system
+##########################
+
+Atlas should be used in the following way:
+
+- Log in to the access node ac.sw.ehu.es:
+
+:code:`ssh username@ac.sw.ehu.es`
+
+You can also establish connection with login nodes manually:
+
+:code:`ssh username@ac-01.sw.ehu.es`
+:code:`ssh username@ac-02.sw.ehu.es`
+
+- Establish connection with atlas.sw.ehu.es:
+
+:code:`ssh username@atlas.sw.ehu.es`
+
+You would need to bring your files and data over, compile your code or use the compiled one, and create a batch submission script. Then submit that script so that your application runs on the compute nodes. Pay attention to the various file systems available and the choices in programming environments. 
+
+SSH key generation
+******************
+
+Technical details
+#################
+
+Atlas nodes run CentOS 7.2 and are managed with batch services through Torque 4.2.10 and Maui 3.3.1. Global scratch storage area is supported by a BeeGFS parallel distributed file system with 6 I/O servers. Inter-node communicationis through a FDR InfiniBand network.
+
+Compute nodes are housed in 4 racks. Each node has two Intel Xeon E5-2680 v3/E5-2683 v4. Nodes are configured with 128GB/256Gb/512GB memory.
+
+The interconnect is an FDR InfiniBand network of Mellanox switches, consisting of a ring topology over 5 switches.
+
+The configuration and features for the compute nodes, interconnect and I/O systems are described below.
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|                                                                     Specifications                                                                                  |
++===================+===================+=============================================================================================================================+
+| **Purchase year** | 2015, 2016, 2017                                                                                                                                |
++-------------------+-------------------------------------------------------------------------------------------------------------------------------------------------+
+|     **Nodes**     | 17 nodes equipped with 2 12-core Intel Xeon E5-2680 v3 at 2.50GHz (24 in total) and 500GB of usable RAM each. Labeled as bigsize.               |
++-------------------+-------------------------------------------------------------------------------------------------------------------------------------------------+
+|    **Network**    |                                                                                                                                                 |
++-------------------+-------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
+	    

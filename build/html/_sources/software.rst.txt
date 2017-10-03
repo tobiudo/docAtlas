@@ -1,0 +1,23 @@
+********
+Software
+********
+
+For a more detailed explanation about how to use installed software on Atlas, please refer to <Environment Modules> section.
+
+How to look for specific software
+#################################
+
+Applications
+############
+
+Compilers
+#########
+
+Libraries
+#########
+
+Profiling and debugging tools
+#############################
+
+
+	    
