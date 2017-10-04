@@ -11,7 +11,7 @@ Welcome to the technical reference of Atlas
 We are glad to have you around. In this site you will find technical information and documentation about the HPC systems hosted by the DIPC Supercomputing Center. Feel free to contact us if you have any question or suggestion.Your feedback will be more than welcome. The site is permanently under construction, yet you will be able to find some useful information. 
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
    atlas
    brontes

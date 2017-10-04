@@ -1,12 +1,10 @@
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>ATLAS &#8212;   documentation</title>
-    <link rel="stylesheet" href="_static/nature.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
@@ -21,158 +19,80 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="BRONTES" href="brontes.html" />
-    <link rel="prev" title="Welcome to the technical reference of Atlas" href="index.html" /> 
+    <link rel="prev" title="Welcome to the technical reference of Atlas" href="index.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
   </head>
   <body>
-    <div class="related" role="navigation" aria-label="related navigation">
-      <h3>Navigation</h3>
-      <ul>
-        <li class="right" style="margin-right: 10px">
-          <a href="genindex.html" title="General Index"
-             accesskey="I">index</a></li>
-        <li class="right" >
-          <a href="brontes.html" title="BRONTES"
-             accesskey="N">next</a> |</li>
-        <li class="right" >
-          <a href="index.html" title="Welcome to the technical reference of Atlas"
-             accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">  documentation</a> &#187;</li> 
-      </ul>
-    </div>  
 
-    <div class="document">
-      <div class="documentwrapper">
-        <div class="bodywrapper">
-          <div class="body" role="main">
-            
-  <div class="section" id="atlas">
-<h1>ATLAS<a class="headerlink" href="#atlas" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="salchicha">
-<h2>Salchicha<a class="headerlink" href="#salchicha" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="getting-started">
-<h2>Getting started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="log-into-the-system">
-<h3>Log into the system<a class="headerlink" href="#log-into-the-system" title="Permalink to this headline">¶</a></h3>
-<p>1. Log in to the access node ac.sw.ehu.es:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">ssh</span> <span class="n">username</span><span class="nd">@ac</span><span class="o">.</span><span class="n">sw</span><span class="o">.</span><span class="n">ehu</span><span class="o">.</span><span class="n">eus</span>
-</pre></div>
-</div>
-<p>You can also establish connection with login nodes manually:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">ssh</span> <span class="n">username</span><span class="nd">@ac</span><span class="o">-</span><span class="mf">01.</span><span class="n">sw</span><span class="o">.</span><span class="n">ehu</span><span class="o">.</span><span class="n">eus</span>
-<span class="n">ssh</span> <span class="n">username</span><span class="nd">@ac</span><span class="o">-</span><span class="mf">02.</span><span class="n">sw</span><span class="o">.</span><span class="n">ehu</span><span class="o">.</span><span class="n">eus</span>
-</pre></div>
-</div>
-<p>2. Establish connection with atlas.sw.ehu.es:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">ssh</span> <span class="n">username</span><span class="nd">@atlas</span><span class="o">.</span><span class="n">sw</span><span class="o">.</span><span class="n">ehu</span><span class="o">.</span><span class="n">eus</span>
-</pre></div>
-</div>
-<p>You would need to bring your files and data over, compile your code or use the compiled one, and create a batch submission script. Then submit that script so that your application runs on the compute nodes. Pay attention to the various file systems available and the choices in programming environments.</p>
-<div class="section" id="ssh-key-generation">
-<h4>SSH key generation<a class="headerlink" href="#ssh-key-generation" title="Permalink to this headline">¶</a></h4>
-</div>
-</div>
-<div class="section" id="technical-details">
-<h3>Technical details<a class="headerlink" href="#technical-details" title="Permalink to this headline">¶</a></h3>
-<p>Atlas nodes run CentOS 7.2 and are managed with batch services through Torque 4.2.10 and Maui 3.3.1. Global scratch storage area is supported by a BeeGFS parallel distributed file system with 6 I/O servers. Inter-node communicationis through a FDR InfiniBand network.</p>
-<p>Compute nodes are housed in 4 racks. Each node has two Intel Xeon E5-2680 v3/E5-2683 v4. Nodes are configured with 128GB/256Gb/512GB memory.</p>
-<div class="figure align-center">
-<a class="reference internal image-reference" href="_images/atlas.png"><img alt="Atlas cluster during maintenance" src="_images/atlas.png" style="width: 552.0px; height: 360.0px;" /></a>
-</div>
-<p>The interconnect is an FDR InfiniBand network of Mellanox switches, consisting of a ring topology over 5 switches.</p>
-<p>The configuration and features for the compute nodes, interconnect and I/O systems are described below.</p>
-<table border="1" class="docutils">
-<colgroup>
-<col width="20%" />
-<col width="80%" />
-</colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head" colspan="2">Specifications</th>
-</tr>
-</thead>
-<tbody valign="top">
-<tr class="row-even"><td><strong>Purchase year</strong></td>
-<td>2015, 2016, 2017</td>
-</tr>
-<tr class="row-odd"><td><strong>Nodes</strong></td>
-<td>17 nodes with 2 12-core Intel Xeon E5-2680 v3 at 2.50GHz and 500GB of RAM.</td>
-</tr>
-<tr class="row-even"><td><strong>Network</strong></td>
-<td>&#160;</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<div class="section" id="running-jobs-on-atlas">
-<h2>Running jobs on Atlas<a class="headerlink" href="#running-jobs-on-atlas" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="submitting-your-jobs">
-<h3>Submitting your jobs<a class="headerlink" href="#submitting-your-jobs" title="Permalink to this headline">¶</a></h3>
-</div>
-<div class="section" id="monitoring-and-managing-jobs">
-<h3>Monitoring and managing jobs<a class="headerlink" href="#monitoring-and-managing-jobs" title="Permalink to this headline">¶</a></h3>
-</div>
-<div class="section" id="accounting">
-<h3>Accounting<a class="headerlink" href="#accounting" title="Permalink to this headline">¶</a></h3>
-</div>
-<div class="section" id="batch-script-examples">
-<h3>Batch script examples<a class="headerlink" href="#batch-script-examples" title="Permalink to this headline">¶</a></h3>
-</div>
-</div>
-<div class="section" id="file-storage-and-i-o">
-<h2>File storage and I/O<a class="headerlink" href="#file-storage-and-i-o" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="software">
-<h2>Software<a class="headerlink" href="#software" title="Permalink to this headline">¶</a></h2>
-<p>For a more detailed explanation about how to use installed software on Atlas, please refer to &lt;Environment Modules&gt; section.</p>
-<div class="section" id="how-to-look-for-specific-software">
-<h3>How to look for specific software<a class="headerlink" href="#how-to-look-for-specific-software" title="Permalink to this headline">¶</a></h3>
-</div>
-<div class="section" id="applications">
-<h3>Applications<a class="headerlink" href="#applications" title="Permalink to this headline">¶</a></h3>
-</div>
-<div class="section" id="compilers">
-<h3>Compilers<a class="headerlink" href="#compilers" title="Permalink to this headline">¶</a></h3>
-</div>
-<div class="section" id="libraries">
-<h3>Libraries<a class="headerlink" href="#libraries" title="Permalink to this headline">¶</a></h3>
-</div>
-<div class="section" id="profiling-and-debugging-tools">
-<h3>Profiling and debugging tools<a class="headerlink" href="#profiling-and-debugging-tools" title="Permalink to this headline">¶</a></h3>
-</div>
-</div>
-<div class="section" id="limits">
-<h2>Limits<a class="headerlink" href="#limits" title="Permalink to this headline">¶</a></h2>
-<div class="math">
-<p><img src="_images/math/c2402249f09bad27d7fa5e0792bc3142aa41e481.png" alt="\begin{eqnarray}
-   y    &amp; = &amp; ax^2 + bx + c \\
-   f(x) &amp; = &amp; x^2 + 2xy + y^2
-   \end{eqnarray}"/></p>
-</div><div class="section" id="soft-limits">
-<h3>Soft limits<a class="headerlink" href="#soft-limits" title="Permalink to this headline">¶</a></h3>
-</div>
-<div class="section" id="hard-limits">
-<h3>Hard limits<a class="headerlink" href="#hard-limits" title="Permalink to this headline">¶</a></h3>
-</div>
-</div>
-</div>
-
-
-          </div>
-        </div>
+  <div id="navbar" class="navbar navbar-inverse navbar-default ">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html"><span><img src="_static/dipc_logo.png"></span>
+          </a>
+        <span class="navbar-text navbar-version pull-left"><b></b></span>
       </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper">
-            <p class="logo"><a href="index.html">
-              <img class="logo" src="_static/dipc_logo.png" alt="Logo"/>
-            </a></p>
-  <h3><a href="index.html">Table Of Contents</a></h3>
-  <ul>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+                <li><a href="http://dipc.ehu.eus/cc">DSC website</a></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">ATLAS</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#getting-started">Getting started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#running-jobs-on-atlas">Running jobs on Atlas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#file-storage-and-i-o">File storage and I/O</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#software">Software</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#limits">Limits</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="brontes.html">BRONTES</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ponto.html">PONTO</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hemera.html">HEMERA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="computational_units.html">Computational Units</a></li>
+<li class="toctree-l1"><a class="reference internal" href="environment_modules.html">Environment Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="courses_and_seminars.html">Courses and Seminars</a></li>
+<li class="toctree-l1"><a class="reference internal" href="staff.html">Staff</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
 <li><a class="reference internal" href="#">ATLAS</a><ul>
-<li><a class="reference internal" href="#salchicha">Salchicha</a></li>
 <li><a class="reference internal" href="#getting-started">Getting started</a><ul>
 <li><a class="reference internal" href="#log-into-the-system">Log into the system</a><ul>
 <li><a class="reference internal" href="#ssh-key-generation">SSH key generation</a></li>
@@ -183,74 +103,345 @@
 </li>
 <li><a class="reference internal" href="#running-jobs-on-atlas">Running jobs on Atlas</a><ul>
 <li><a class="reference internal" href="#submitting-your-jobs">Submitting your jobs</a></li>
+<li><a class="reference internal" href="#queues">Queues</a></li>
 <li><a class="reference internal" href="#monitoring-and-managing-jobs">Monitoring and managing jobs</a></li>
-<li><a class="reference internal" href="#accounting">Accounting</a></li>
-<li><a class="reference internal" href="#batch-script-examples">Batch script examples</a></li>
+<li><a class="reference internal" href="#batch-script-examples-for-pure-mpi-applications">Batch script examples for pure MPI applications</a></li>
+<li><a class="reference internal" href="#batch-script-examples-for-pure-openmp-applications">Batch script examples for pure OpenMP applications</a></li>
+<li><a class="reference internal" href="#batch-script-examples-for-hybrid-parallel-applications">Batch script examples for hybrid parallel applications</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#file-storage-and-i-o">File storage and I/O</a></li>
 <li><a class="reference internal" href="#software">Software</a><ul>
-<li><a class="reference internal" href="#how-to-look-for-specific-software">How to look for specific software</a></li>
-<li><a class="reference internal" href="#applications">Applications</a></li>
-<li><a class="reference internal" href="#compilers">Compilers</a></li>
-<li><a class="reference internal" href="#libraries">Libraries</a></li>
 <li><a class="reference internal" href="#profiling-and-debugging-tools">Profiling and debugging tools</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#limits">Limits</a><ul>
-<li><a class="reference internal" href="#soft-limits">Soft limits</a></li>
-<li><a class="reference internal" href="#hard-limits">Hard limits</a></li>
+<li><a class="reference internal" href="#limits">Limits</a></li>
 </ul>
 </li>
 </ul>
-</li>
 </ul>
+</li>
+              
+            
+            
+            
+            
+            
+          </ul>
 
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="index.html"
-                        title="previous chapter">Welcome to the technical reference of Atlas</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="brontes.html"
-                        title="next chapter">BRONTES</a></p>
-  <div role="note" aria-label="source link">
-    <h3>This Page</h3>
-    <ul class="this-page-menu">
-      <li><a href="_sources/atlas.rst.txt"
-            rel="nofollow">Show Source</a></li>
-    </ul>
-   </div>
-<div id="searchbox" style="display: none" role="search">
-  <h3>Quick search</h3>
-    <form class="search" action="search.html" method="get">
-      <div><input type="text" name="q" /></div>
-      <div><input type="submit" value="Go" /></div>
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
-    </form>
-</div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
         </div>
-      </div>
-      <div class="clearer"></div>
     </div>
-    <div class="related" role="navigation" aria-label="related navigation">
-      <h3>Navigation</h3>
-      <ul>
-        <li class="right" style="margin-right: 10px">
-          <a href="genindex.html" title="General Index"
-             >index</a></li>
-        <li class="right" >
-          <a href="brontes.html" title="BRONTES"
-             >next</a> |</li>
-        <li class="right" >
-          <a href="index.html" title="Welcome to the technical reference of Atlas"
-             >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">  documentation</a> &#187;</li> 
-      </ul>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 content">
+      
+  <div class="section" id="atlas">
+<h1>ATLAS<a class="headerlink" href="#atlas" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="getting-started">
+<h2>Getting started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="log-into-the-system">
+<h3>Log into the system<a class="headerlink" href="#log-into-the-system" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic simple">
+<li>Log in to the access node ac.sw.ehu.es:</li>
+</ol>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>ssh username@atlas.sw.ehu
+</pre></div>
+</div>
+<p>You can also establish connection with login nodes manually:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>ssh username@ac-01.sw.ehu.eus
+ssh username@ac-02.sw.ehu.eus
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li>Establish connection with atlas.sw.ehu.es:</li>
+</ol>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>ssh username@atlas.sw.ehu.eus
+</pre></div>
+</div>
+<p>You would need to bring your files and data over, compile your code or use the compiled one, and create a batch submission script. Then submit that script so that your application runs on the compute nodes. Pay attention to the various file systems available and the choices in programming environments.</p>
+<div class="section" id="ssh-key-generation">
+<h4>SSH key generation<a class="headerlink" href="#ssh-key-generation" title="Permalink to this headline">¶</a></h4>
+</div>
+</div>
+<div class="section" id="technical-details">
+<h3>Technical details<a class="headerlink" href="#technical-details" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="_images/atlas.png"><img alt="Atlas cluster during maintenance" src="_images/atlas.png" style="width: 552.0px; height: 360.0px;" /></a>
+</div>
+<table border="1" class="colwidths-given docutils" id="id1">
+<caption><span class="caption-text">Atlas Specifications</span><a class="headerlink" href="#id1" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><strong>Operating System</strong></td>
+<td>GNU/Linux CentOS 7.2</td>
+</tr>
+<tr class="row-even"><td><strong>Resource manager</strong></td>
+<td>Torque 4.2.10</td>
+</tr>
+<tr class="row-odd"><td><strong>Scheduler</strong></td>
+<td>Maui 3.3.1</td>
+</tr>
+<tr class="row-even"><td><strong>Purchase year</strong></td>
+<td>2015, 2016, 2017</td>
+</tr>
+<tr class="row-odd"><td><strong>Nodes</strong></td>
+<td><p class="first">17 nodes with 2 12-core Intel Xeon E5-2680 v3 at 2.50GHz and 500GB of RAM. Labeled as <em>bigsize</em>.</p>
+<p>33 nodes equipped with 2 12-core Intel Xeon E5-2680 v3 at 2.50GHz (24 in total) and 245GB of usable RAM each. Labeled as <em>mediumsize</em>.</p>
+<p>66 nodes equipped with 2 12-core Intel Xeon E5-2683 v4 at 2.10GHz (32 in total) and 245GB of usable RAM each. Labeled as <em>mediumsize</em>.</p>
+<p class="last">56 nodes equipped with 2 12-core Intel Xeon E5-2680 v3 at 2.50GHz (24 in total) and 120GB of usable RAM each.</p>
+</td>
+</tr>
+<tr class="row-even"><td><strong>Network</strong></td>
+<td>56 Gbps FDR Infiniband and an additional 1Gbps Ethernet network for management. It consist of a ring topology over 5 switches.</td>
+</tr>
+<tr class="row-odd"><td><strong>File storage and I/O</strong></td>
+<td>80 TB of global scratch storage area is supported by a BeeGFS parallel distributed file system with 6 I/O servers.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="running-jobs-on-atlas">
+<h2>Running jobs on Atlas<a class="headerlink" href="#running-jobs-on-atlas" title="Permalink to this headline">¶</a></h2>
+<p>Batch jobs are jobs that run non-interactively under the control of a <em>batch script</em>, which is a text file containing a number of job directives and GNU/linux commands or utilities. Batch scripts are submitted to the batch system, where they are queued awaiting free resources. The batch system has two components on Atlas:</p>
+<ul class="simple">
+<li>Torque as the resource manager is in charge of:<ol class="arabic">
+<li>Accepting and starting jobs/tasks across a batch farm (qsub).</li>
+<li>Cancelling jobs (qdel).</li>
+<li>Monitoring jobs (qstat).</li>
+<li>Accounting.</li>
+</ol>
+</li>
+<li>Maui as the scheduler is in charge of scheduling the jobs.</li>
+</ul>
+<div class="section" id="submitting-your-jobs">
+<h3>Submitting your jobs<a class="headerlink" href="#submitting-your-jobs" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic simple">
+<li>First you will need to bring all your data over. This includes all your input files and programs. Since no direct access to cluster’s master/access node is allowed you an do this in two ways:</li>
+</ol>
+<ol class="loweralpha simple">
+<li><em>sft/scp</em> your files to your home directory mounted on any of the <em>ac</em> computers. For example, while you are in your computer:</li>
+</ol>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>scp my_stuff username@ac.sw.ehu.eus:
+</pre></div>
+</div>
+<ol class="loweralpha simple" start="2">
+<li><em>sftp/scp</em> your files while you are connected to the master node:</li>
+</ol>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>scp username@mycomputer:&lt;my_stuff&gt; /scratch/username/my_dir
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li>Jobs can only be submitted from the <em>/scratch</em> filesystem. Therefore, before submitting any jobs you will need to move or copy
+all your files to a subdirectory under your <em>/scratch</em> directory (which typically would be <em>/scratch/username</em>).</li>
+<li>Prepare your batch script and submit is using the <em>qsub</em> command:</li>
+</ol>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>qsub batch_script.pbs
+</pre></div>
+</div>
+</div>
+<div class="section" id="queues">
+<h3>Queues<a class="headerlink" href="#queues" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="colwidths-given docutils" id="id2">
+<caption><span class="caption-text">Queues</span><a class="headerlink" href="#id2" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head"><strong>Queue</strong></th>
+<th class="head"><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>General purpose routing queue.</td>
+<td>Queue for users that belong to <em>qchem</em> group.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="monitoring-and-managing-jobs">
+<h3>Monitoring and managing jobs<a class="headerlink" href="#monitoring-and-managing-jobs" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="batch-script-examples-for-pure-mpi-applications">
+<h3>Batch script examples for pure MPI applications<a class="headerlink" href="#batch-script-examples-for-pure-mpi-applications" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+<span class="c1">#PBS -q parallel</span>
+<span class="c1">#PBS -l nodes=1:ppn=24:mediumsize</span>
+<span class="c1">#PBS -l mem=192gb</span>
+<span class="c1">#PBS -l cput=1000:00:00</span>
+<span class="c1">#PBS -N JOB_NAME</span>
+
+<span class="nb">export</span> <span class="nv">LSCRATCH_DIR</span><span class="o">=</span>/lscratch/<span class="nv">$USER</span>/jobs/<span class="nv">$PBS_JOBID</span>
+mkdir -p <span class="nv">$LSCRATCH_DIR</span>
+<span class="nb">cd</span> <span class="nv">$PBS_O_WORKDIR</span>
+cp -r * <span class="nv">$LSCRATCH_DIR</span>
+<span class="nb">cd</span> <span class="nv">$LSCRATCH_DIR</span>
+
+module load program/version
+
+<span class="nb">export</span> <span class="nv">NPROCS</span><span class="o">=</span><span class="sb">`</span>wc -l &lt; <span class="nv">$PBS_NODEFILE</span><span class="sb">`</span>
+
+mpirun -np <span class="nv">$NPROCS</span> program &gt;<span class="p">&amp;</span> OUTPUT_FILE
+
+<span class="nb">export</span> <span class="nv">RESULTS_DIR</span><span class="o">=</span><span class="nv">$PBS_O_WORKDIR</span>/RESULTS
+mkdir -p <span class="nv">$RESULTS_DIR</span>
+cp -r * <span class="nv">$RESULTS_DIR</span>
+rm -rf <span class="nv">$LSCRATCH_DIR</span>
+</pre></div>
+</div>
+<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+<span class="c1">#PBS -q parallel</span>
+<span class="c1">#PBS -l nodes=1:ppn=24:bigsize</span>
+<span class="c1">#PBS -l mem=500gb</span>
+<span class="c1">#PBS -l cput=1000:00:00</span>
+<span class="c1">#PBS -N JOB_NAME</span>
+
+<span class="nb">cd</span> <span class="nv">$PBS_O_WORKDIR</span>
+
+module load program/version
+
+<span class="nb">export</span> <span class="nv">NPROCS</span><span class="o">=</span><span class="sb">`</span>wc -l &lt; <span class="nv">$PBS_NODEFILE</span><span class="sb">`</span>
+
+mpirun -np <span class="nv">$NPROCS</span> program &gt;<span class="p">&amp;</span> OUTPUT_FILE
+</pre></div>
+</div>
+</div>
+<div class="section" id="batch-script-examples-for-pure-openmp-applications">
+<h3>Batch script examples for pure OpenMP applications<a class="headerlink" href="#batch-script-examples-for-pure-openmp-applications" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+<span class="c1">#PBS -q parallel</span>
+<span class="c1">#PBS -l nodes=1:ppn=24:smallsize</span>
+<span class="c1">#PBS -l mem=100gb</span>
+<span class="c1">#PBS -l cput=1000:00:00</span>
+<span class="c1">#PBS -N JOB_NAME</span>
+
+<span class="nb">cd</span> <span class="nv">$PBS_O_WORKDIR</span>
+
+module load program/version
+
+<span class="nb">export</span> <span class="nv">NPROCS</span><span class="o">=</span><span class="sb">`</span>wc -l &lt; <span class="nv">$PBS_NODEFILE</span><span class="sb">`</span>
+
+<span class="nb">export</span> <span class="nv">OMP_NUM_THREADS</span><span class="o">=</span><span class="m">24</span>
+
+my_openmp_program &gt;$ OUTPUT_FILE
+</pre></div>
+</div>
+</div>
+<div class="section" id="batch-script-examples-for-hybrid-parallel-applications">
+<h3>Batch script examples for hybrid parallel applications<a class="headerlink" href="#batch-script-examples-for-hybrid-parallel-applications" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+<div class="section" id="file-storage-and-i-o">
+<h2>File storage and I/O<a class="headerlink" href="#file-storage-and-i-o" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="colwidths-given docutils" id="id3">
+<caption><span class="caption-text">Filesystems</span><a class="headerlink" href="#id3" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col width="13%" />
+<col width="13%" />
+<col width="13%" />
+<col width="13%" />
+<col width="13%" />
+<col width="13%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head"><strong>Description</strong></th>
+<th class="head"><strong>Mount point</strong></th>
+<th class="head"><strong>Quota</strong></th>
+<th class="head"><strong>Size</strong></th>
+<th class="head"><strong>Purpose</strong></th>
+<th class="head"><strong>Backup</strong></th>
+<th class="head"><strong>Purge Cycle</strong></th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference external" href="http://www.python.org/">Home directory</a></td>
+<td>/dipc</td>
+<td>600 GB</td>
+<td>44 TB</td>
+<td>Storage, compilation</td>
+<td>Yes, daily</td>
+<td>Never purged</td>
+</tr>
+<tr class="row-odd"><td><a class="reference external" href="http://www.python.org/">Scratch filesystem</a></td>
+<td>/scratch</td>
+<td>1.5 TB</td>
+<td>88 TB</td>
+<td>running jobs</td>
+<td>No</td>
+<td>Purged every month (not implemented yet)</td>
+</tr>
+<tr class="row-even"><td><a class="reference external" href="http://www.python.org/">Lscratch filesystems</a></td>
+<td>/lscratch</td>
+<td>None</td>
+<td>400 GB</td>
+<td>running single node jobs</td>
+<td>No</td>
+<td>Purged every month (not implemented yet)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="software">
+<h2>Software<a class="headerlink" href="#software" title="Permalink to this headline">¶</a></h2>
+<p>For a more detailed explanation about how to use installed software on Atlas, please refer to <a class="reference external" href="http://www.google.es">Environment Modules</a> section.</p>
+<div class="section" id="profiling-and-debugging-tools">
+<h3>Profiling and debugging tools<a class="headerlink" href="#profiling-and-debugging-tools" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+<div class="section" id="limits">
+<h2>Limits<a class="headerlink" href="#limits" title="Permalink to this headline">¶</a></h2>
+<p>Soft limits are those that could be surpassed when the load of the cluster is low whereas hard limits those specified by the hardware of the cluster.</p>
+<table border="1" class="colwidths-given docutils" id="id4">
+<caption><span class="caption-text">Atlas Limits</span><a class="headerlink" href="#id4" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><strong>Soft limits</strong></td>
+<td>Maximum number of processors per user: 144</td>
+</tr>
+<tr class="row-even"><td><strong>Hard limits</strong></td>
+<td>Maximum number of processors per user: 4114</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
     </div>
-    <div class="footer" role="contentinfo">
-        &#169; Copyright 2017, Diego Lasa.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.3.
-    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2017, Diego Lasa.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.3.<br/>
+    </p>
+  </div>
+</footer>
   </body>
 </html>
